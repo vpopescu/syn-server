@@ -1,0 +1,33 @@
+[package]
+name = "syn-server"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "syn-server"
+
+
+[dependencies]
+config = "0.15"
+serde = { version = "1.0", features = ["derive"] }
+serde_derive = "1.0"
+
+slog = { version = "2.7", features =[ "release_max_level_trace", "max_level_trace" ] }
+slog-async = "2.8"
+slog-term = "2.9"
+tokio = { version = "1", features = ["macros", "rt-multi-thread", "time", "net", "io-util"] }
+hex = "0.4"
+async-trait = "0.1"
+
+#sha2 = { version = "0.10", default-features = false }
+#sha1 = { version = "0.10", default-features = false }
+#md-5 = { version = "0.10", default-features = false }
+crc32fast ="1.4"
+
+
+
+
+[dev-dependencies]
+serial_test = "3.2"
+rand = "0.8"
+
